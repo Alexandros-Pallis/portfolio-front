@@ -1,0 +1,17 @@
+:root {
+    --primary-100: #000;
+    --primary-200: #0d1a26;
+    --primary-300: #1a334c;
+    --primary-400: #264d73;
+    --primary-500: #31669b;
+
+    --text-100: #d8e2f3;
+    --text-200: #b2c4e6;
+    --text-300: #8da7d8;
+    --text-400: #688aca;
+    --text-500: #436dbc;
+
+    --body-bg: var(--primary-200);
+    --text-color: var(--text-100);
+    --button-bg: var(--primary-500);
+}

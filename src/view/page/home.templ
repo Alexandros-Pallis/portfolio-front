@@ -1,0 +1,38 @@
+package page
+
+import "apallis/portfolio-front/view/layout"
+import "apallis/portfolio-front/view/components"
+
+templ Home() {
+	@layout.Base("Home") {
+		<div class="resume">
+			<a
+				role="button"
+				href="/bio.pdf"
+				class="resume-button"
+				target="_blank"
+			>Resume</a>
+		</div>
+		<div class="hero-wrap d-flex">
+			<div class="hero">
+				<a href="/">
+					<h1 class="title">Alexandros Pallis</h1>
+				</a>
+				<h2 class="subtitle">Fullstack software developer</h2>
+				<p class="description">
+					Hello! I'm a fullstack software developer based in Athens, Greece.
+					<br/><br/>
+					I'm passionate about creating software that is both functional and beautiful.
+				</p>
+				<div class="social-container">
+					<div class="social-title">Find me on:</div>
+					<div class="social-items-container d-flex">
+						@components.Social("https://github.com/Alexandros-Pallis", "/icons/github.svg")
+						@components.Social("https://www.linkedin.com/in/alexandros-pallis-8285191b9/", "/icons/linkedin.svg")
+						@components.Social("mailto:alexanpall@gmail.com", "/icons/email.svg")
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+}

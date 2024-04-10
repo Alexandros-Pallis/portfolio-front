@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        - artifacts_folder=src
+      dockerfile: dev.Dockerfile
+    container_name: portfolio-front
+    ports:
+      - "5002:80"
+    volumes:
+      - ./src:/usr/src/app
+    network_mode: bridge
+    environment:
+      - GIN_MODE

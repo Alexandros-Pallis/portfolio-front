@@ -1,0 +1,13 @@
+package components
+
+templ Social(link, src string) {
+	<a
+		href={ templ.URL(link) }
+		target="_blank"
+		rel="noopener noreferrer"
+		class="social-item d-block"
+		title={ link }
+	>
+		<img src={ src } alt="social" width="32" height="32"/>
+	</a>
+}

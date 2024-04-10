@@ -1,0 +1,23 @@
+package layout
+
+templ Base(title string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+			<title>{ title + " | Alexandros Pallis" }</title>
+			<link rel="stylesheet" href="/dist/css/main.min.css"/>
+			<link rel="shortcut icon" href="/favicon.png"/>
+			<script src="/dist/js/main.min.js" defer></script>
+		</head>
+		<body>
+			<main>
+				<div class="container">
+					{ children... }
+				</div>
+			</main>
+		</body>
+	</html>
+}

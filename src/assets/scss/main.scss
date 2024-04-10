@@ -1,0 +1,113 @@
+@use "./partials/reset";
+@use "./theme";
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("../fonts/jetbrainsMono/JetBrainsMono-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("../fonts/jetbrainsMono/JetBrainsMono-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("../fonts/jetbrainsMono/JetBrainsMono-ExtraBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 900;
+}
+
+body {
+    position: relative;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    font-family: 'JetBrains Mono', monospace;
+    height: 100vh;
+    font-size: 1em;
+    @media (min-width: 992px) {
+        font-size: 1.2em;
+    }
+}
+
+p {
+    color: var(--text-200);
+
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 1em;
+}
+
+.resume {
+    display: flex;
+    justify-content: end;
+    margin-top: 2em;
+    a {
+        padding: 1em;
+        border-radius: 5px;
+        background-color: var(--button-bg);
+    }
+}
+
+.hero-wrap {
+    margin-top: 2em;
+    @media (min-width: 992px) {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+}
+
+.hero {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-inline: auto;
+    @media (min-width: 992px) {
+        width: unset;
+    }
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 700;
+    @media (min-width: 992px) {
+        font-size: 3em;
+    }
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+    @media (min-width: 992px) {
+        font-size: 2em;
+    }
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.social-items-container {
+    display: flex;
+    gap: 1em;
+}
+
+.social-item {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
