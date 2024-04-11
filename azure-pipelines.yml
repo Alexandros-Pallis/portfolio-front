@@ -6,13 +6,13 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: Websites Host 1
 
 steps:
-- task: PublishBuildArtifacts@1
-  displayName: Publish Deploy folder as artifacts
+- task: Bash@3
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)/prod.docker-compose.yml'
-    ArtifactName: 'Deploy'
-    publishLocation: 'Container'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
