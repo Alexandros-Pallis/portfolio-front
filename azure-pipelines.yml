@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: Websites Host 1
+pool: default
 
 steps:
 - task: Bash@3
