@@ -3,10 +3,8 @@ package main
 import (
 	"apallis/portfolio-front/renderer"
 	"apallis/portfolio-front/routes"
-	"log"
 	"net/http"
 
-	"github.com/gin-gonic/autotls"
 	"github.com/gin-gonic/gin"
 )
 
@@ -29,6 +27,5 @@ func main() {
 			"message": "pong",
 		})
 	})
-    log.Fatal(autotls.Run(router, "alexandrospallis.dev", "www.alexandrospallis.dev"))
-	// router.Run(":80")
+	router.Run(":80")
 }
