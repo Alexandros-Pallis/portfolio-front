@@ -11,14 +11,13 @@ pool: default
 steps:
 
 - task: Docker@2
-  displayName: Build image
   inputs:
     containerRegistry: 'dockerhub'
     repository: 'portfolio-front'
     command: 'build'
     Dockerfile: '**/prod.Dockerfile'
     tags: 'latest'
-    arguments: 'artifacts_folder=src'
+    arguments: '--build-arg artifacts_folder=src'
 
 - task: Docker@2
   displayName: Push image to dockerhub
