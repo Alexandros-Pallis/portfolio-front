@@ -8,13 +8,12 @@ trigger:
 
 pool: default
 
-variables:
-- group: portfolio-front
-
 steps:
-- task: Bash@3
+
+- task: Docker@2
   inputs:
-    targetType: 'inline'
-    script: |
-      echo $(DOCKER_LOGIN_PASSWORD) | docker login -u apallis --password-stdin
-      make container-prod
+    containerRegistry: 'dockerhub'
+    repository: 'nginx-proxy'
+    command: 'buildAndPush'
+    Dockerfile: '**/prod.Dockerfile'
+    tags: 'latest'
